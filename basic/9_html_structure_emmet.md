@@ -125,6 +125,158 @@ Expands to:
     </ul>
 </div>
 ```
+---
+
+## 🔹 **Parent → Child (`>`)**
+
+### **Emmet**
+
+```emmet
+div>p>li
+```
+
+### **HTML Output**
+
+```html
+<div>
+  <p>
+    <li></li>
+  </p>
+</div>
+```
+
+---
+
+## 🔹 **Multiple Elements (`*`)**
+
+### **Emmet**
+
+```emmet
+div*2
+```
+
+### **HTML Output**
+
+```html
+<div></div>
+<div></div>
+```
+
+---
+
+## 🔹 **Class (`.`) and ID (`#`)**
+
+### **Emmet**
+
+```emmet
+div.class1>p.classp>p#un1>li*5
+```
+
+### **HTML Output**
+
+```html
+<div class="class1">
+  <p class="classp">
+    <p id="un1">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </p>
+  </p>
+</div>
+```
+
+---
+
+## 🔹 **Sibling Elements (`+`)**
+
+### **Emmet**
+
+```emmet
+div>p+p+p
+```
+
+### **HTML Output**
+
+```html
+<div>
+  <p></p>
+  <p></p>
+  <p></p>
+</div>
+```
+
+---
+
+## 🔹 **Parent + Sibling Combo**
+
+### **Emmet**
+
+```emmet
+div>p+span+ul
+```
+
+### **HTML Output**
+
+```html
+<div>
+  <p></p>
+  <span></span>
+  <ul></ul>
+</div>
+```
+
+---
+
+## 🔹 **Text inside element (`{}`)**
+
+### **Emmet**
+
+```emmet
+p{Hello World}
+```
+
+### **HTML Output**
+
+```html
+<p>Hello World</p>
+```
+
+---
+
+## 🔹 **Numbered items (`$`)**
+
+### **Emmet**
+
+```emmet
+li.item$*3
+```
+
+### **HTML Output**
+
+```html
+<li class="item1"></li>
+<li class="item2"></li>
+<li class="item3"></li>
+```
+
+---
+
+## 🔥 **Most Useful Emmet (Remember This!)**
+
+| Symbol | Meaning   |
+| ------ | --------- |
+| `>`    | Child     |
+| `+`    | Sibling   |
+| `*`    | Multiple  |
+| `.`    | Class     |
+| `#`    | ID        |
+| `{}`   | Text      |
+| `$`    | Numbering |
+
+---
 
 ### Features of Emmet
 
@@ -153,3 +305,7 @@ Examples:
 The browser and search engines use these tags for SEO, page rendering, and responsive behavior.
 
 ---
+
+
+
+
