@@ -385,6 +385,7 @@ hi
 ## IIFE (Immediately Invoked Function Expression)
 
 * Function that runs **immediately after creation**
+* IIFE is called self-invoking function
 
 ```js
 (function execute() {
