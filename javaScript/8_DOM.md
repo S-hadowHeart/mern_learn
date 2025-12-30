@@ -172,7 +172,7 @@ console.log(var3[1].innerHTML);
 * Returns **HTMLCollection**
 
 ```js
-var3[2].innerText = "Hello PwSkills";
+var3[2].innerText = "Hello world";
 var3[2].style.color = "red";
 ```
 
@@ -207,3 +207,195 @@ var4.setAttribute("title", "anurag");
 ```
 
 * Adds or updates attributes dynamically
+
+
+# Creating & Removing HTML Elements using JavaScript
+
+---
+
+## Creating HTML Elements using JavaScript
+
+JavaScript allows us to **create, style, and insert HTML elements dynamically** using the DOM.
+
+### Steps to Create an HTML Element
+
+1. Create the element
+2. Add class / styles / content
+3. Append it to the DOM
+
+
+
+### Example: Create an `<h1>` Element
+
+```js
+let title = document.createElement("h1");
+````
+
+* Creates an `h1` element in memory (not yet visible)
+
+---
+
+### Adding Class Name
+
+```js
+title.className = "title";
+```
+
+* Assigns a CSS class to the element
+
+---
+
+### Adding Styles
+
+```js
+title.style.fontSize = "24px";
+```
+
+* Styles can be applied directly using `.style`
+
+---
+
+### Adding Text Content
+
+```js
+title.textContent = "Creating HTML Element";
+```
+
+* `textContent` adds text safely (no HTML parsing)
+
+---
+
+### Appending to the Document
+
+```js
+document.body.appendChild(title);
+```
+
+* Adds the element to the page
+* Now the element becomes visible
+
+---
+
+## Removing HTML Elements using JavaScript
+
+### Select Parent Element
+
+```js
+const ul = document.querySelector("ul");
+```
+
+---
+
+### Select Child Elements
+
+```js
+const lists = document.querySelectorAll("li");
+```
+
+* Returns a **NodeList** of `<li>` elements
+
+---
+
+### Remove Elements Using Loop
+
+```js
+for (list of lists) {
+  ul.removeChild(list);
+}
+```
+
+* Removes each `<li>` from the `<ul>`
+
+---
+
+## Key DOM Methods Used
+
+| Method               | Purpose                  |
+| -------------------- | ------------------------ |
+| `createElement()`    | Create new element       |
+| `appendChild()`      | Add element to DOM       |
+| `removeChild()`      | Remove element           |
+| `querySelector()`    | Select single element    |
+| `querySelectorAll()` | Select multiple elements |
+
+---
+
+# Event Listeners in JavaScript
+
+Events allow JavaScript to **respond to user actions** like clicks, double-clicks, keyboard input, etc.
+
+---
+
+## Inline Event (Not Recommended)
+
+```html
+<button ondblclick="hey()">Submit</button>
+```
+
+* Event written directly in HTML
+* ❌ Not scalable
+* ❌ Hard to maintain
+
+---
+
+## Event Listener using JavaScript (Recommended)
+
+```js
+document.addEventListener("click", hello);
+```
+
+* Separates HTML and JavaScript
+* ✔ Clean
+* ✔ Professional approach
+
+---
+
+## Example: Click Event
+
+```js
+function hello() {
+  document.getElementById("js").innerText = "hello hi";
+}
+```
+
+* Runs when the document is clicked
+* Updates paragraph text
+
+---
+
+## Example: Double Click Event
+
+```js
+function hey() {
+  let btn = document.getElementById("jss");
+
+  btn.innerText = "hiiii";
+  btn.style.color = "red";
+  btn.style.backgroundColor = "black";
+  btn.style.padding = "16px";
+  btn.style.border = "2px solid yellow";
+}
+```
+
+* Triggered on **double click**
+* Dynamically updates:
+
+  * Text
+  * Color
+  * Background
+  * Padding
+  * Border
+
+---
+
+## Common DOM Events
+
+| Event       | Description          |
+| ----------- | -------------------- |
+| `click`     | Mouse click          |
+| `dblclick`  | Double click         |
+| `mouseover` | Mouse over element   |
+| `mouseout`  | Mouse leaves element |
+| `keydown`   | Key pressed          |
+| `submit`    | Form submission      |
+
